@@ -1,0 +1,52 @@
+/* CSS styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('../images/background.jpg');
+
+}
+
+.welcome {
+  font-family: Impact, sans-serif;
+  color: #A6E0EF;
+  font-size:50px;
+  font-variant-caps: all-small-caps;
+}
+
+.subtitle {
+  margin-top: 50px;
+  font-size: 10px;
+  color: white;
+}
+
+.button {
+  color: rgb(255, 255, 255); 
+  font-size: 30px; 
+  line-height: 30px; 
+  padding: 10px; 
+  border-radius: 10px; 
+  font-weight: normal; 
+  text-decoration: none; 
+  background-image: linear-gradient(to right, rgb(28, 110, 164) 0%, rgb(35, 136, 203) 50%, rgb(20, 78, 117) 100%); 
+  box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px; 
+  border: 2px solid rgb(28, 110, 164); 
+  display: inline-block;
+}
+
+.button:hover {
+  background: #1C6EA4; 
+}
+
+.button:active {
+  background: #144E75; 
+}
+
+
+          

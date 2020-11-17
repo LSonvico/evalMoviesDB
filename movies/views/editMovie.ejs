@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit movie</title>
+</head>
+<body>
+  <!-- <form action="/movies/edit/<%= editMovie.id %>?_method=PUT" method=POST> -->
+  <form action="/movies/edit/<%= editMovie.id %>?_method=PUT" method="POST">
+    <div>
+      <h2>Edit a movie</h2>
+            <p>
+            <label for="title">Title:</label>
+            <input type="text" name="title" value= '<%= editMovie.title %>'>
+            </p>
+            <p>
+            <label for="rating">Rating:</label>
+            <input type="text" name="rating" value= '<%= editMovie.rating %>'>
+            </p>
+            <p>
+            <label for="awards">Awards:</label>
+            <input type="text" name="awards" value= '<%= editMovie.awards %>'>
+            </p>
+            <p>
+            <label for="length">Length:</label>
+            <input type="text" name="length" value= '<%= editMovie.length %>'>
+            </p>
+            <p>
+            <!-- <label for="release_date">Release date</label>
+            <input type="date" name="release_date" placeholder="enter the release date"> -->
+            </p>
+            <label for="">Genre</label>
+            <p>
+            <select name="genre_id">
+            <% generos.forEach(genero => {%>
+              <% if (editMovie.genreId === genero.id) {%>
+                <option value="<%= genero.id %>" selected> <%= genero.name %></option>
+                <% } else { %> 
+                  <option value="<%= genero.id %>"> <%= genero.name %></option>
+                  <% } %> 
+            <% }) %>
+            </select>
+            </p>
+            <label for="">Actores</label>
+            <p>
+            <select name="actors" multiple>
+              <% actores.forEach(actor => { %>
+                <% if (editMovie.actores.some(actorPelicula => actorPelicula.id == actor.id)) { %>
+                  <option value="<%= actor.id %>" selected> <%= actor.first_name %> <%= actor.last_name %></option>
+                  <% } else { %>
+                    <option value="<%= actor.id %>"> <%= actor.first_name %> <%= actor.last_name %></option>
+                    <% } %> 
+                <% }) %>
+            </select>
+            </p>
+            <p>
+            <button type="submit">Actualizar</button>
+            </p>
+    </div>
+  </form>
+</body>
+</html>

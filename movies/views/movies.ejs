@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/stylesheets/movies.css">
+</head>
+<html lang="es">
+<body>
+  <div class=>
+	  <h1 class="banner">listado de peliculas</h1>
+		<form action="/movies/create" method="GET">
+		<button type="submit" class='button'>Agregar pelicula</button>
+		</form>
+		<form action="/movies/search" method="POST" class='searchinput'>
+			<input type="text" name="name" class='searchbar' placeholder="Busca tu Pelicula">
+		<button type="submit" class='searchbutton'>Buscar</button>
+		</form>
+	</div>
+		<div>
+			<article class='eachMovie'>
+			<% peliculas.forEach(peliculas=> { %>
+				<a href=<%="/movies/detail/" + peliculas.id %> >
+				<p class=movieTitle><%= peliculas.title %></p>
+				<img class='movieImage' src="/images/movieBackground.png" alt="logo">
+				</a>
+			<% }) %>
+			</article>
+		</div>
+</body>	
+</html>
