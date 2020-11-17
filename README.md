@@ -20,7 +20,7 @@ Version: v0.1.
 
 # Install notes
 
-1) clone the repository https://github.com/LSonvico/evalMoviesDB
+1) clone the repository https://github.com/LSonvico/evalMoviesDB.git
 
 2) Go to the 'movies' folder and run "npm install" to install dependencies
 
