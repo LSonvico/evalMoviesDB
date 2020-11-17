@@ -6,13 +6,21 @@
 </head>
 <html lang="es">
 <body>
-  <div class=>
-	  <h1 class="banner">listado de peliculas</h1>
+	<div>
+		<h1 class="banner">All Movies</h1>
+	  	<div class=allbuttons>
 		<form action="/movies/create" method="GET">
-		<button type="submit" class='button'>Agregar pelicula</button>
+		<button type="submit" class='button'>Add Movie</button>
 		</form>
+		<form action="/movies/new" method="GET">
+		<button type="submit" class='button'>New Movies</button>
+		</form>
+		<form action="/movies/recommended" method="GET">
+		<button type="submit" class='button'>Recommended Movies</button>
+		</form>
+		</div>
 		<form action="/movies/search" method="POST" class='searchinput'>
-			<input type="text" name="name" class='searchbar' placeholder="Busca tu Pelicula">
+		<input type="text" name="name" class='searchbar' placeholder="Busca tu Pelicula">
 		<button type="submit" class='searchbutton'>Buscar</button>
 		</form>
 	</div>

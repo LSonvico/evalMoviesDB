@@ -14,6 +14,11 @@ body {
   background-size: cover;
 }
 
+.allbuttons{
+  display:flex;
+  flex-direction: row;
+}
+
 .button {
   color: rgb(255, 255, 255); 
   font-size: 30px; 
@@ -43,10 +48,13 @@ body {
   font-size:75px;
   text-transform: uppercase;
   margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
 }
 
 .searchinput {
   width: 100%;
+  margin: 20px 0px 10px 0px;
 }
 
 .searchbar {
@@ -81,4 +89,13 @@ article a {
 .movieTitle {
   text-align: center;
 }
-          
+
+/* CSS style only for search */
+
+.searchcss{
+  padding: 10px;
+  text-decoration: double;
+  color: white;
+  width: 100%;
+  border: 1px groove rgba(255, 255, 255, 0.5)
+}

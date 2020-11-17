@@ -2,22 +2,22 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/stylesheets/movies.css">
 </head>
 <html lang="es">
 <body>
-  <div>
-	  <h2>listado de peliculas</h2>
+	<div>
+		<h1 class="banner">Recommended Movies</h1>
 	</div>
-		  <% peliculas.forEach(peliculas=> { %>
-			<div>	
-				<section>
-					<a href=<%="/movies/detail/" + peliculas.id %> >
-					<article>
-					<p><%= peliculas.title %> </p>
-					</article>
-					</a>
-        </section>
-        <% }) %>
-			</div>
+	<div>
+		<article class='eachMovie'>
+			<% peliculas.forEach(peliculas=> { %>
+			<a href=<%="/movies/detail/" + peliculas.id %> >
+			<p class=movieTitle><%= peliculas.title %></p>
+			<img class='movieImage' src="/images/movieBackground.png" alt="logo">
+			</a>
+		<% }) %>
+		</article>
+	</div>
 </body>	
 </html>

@@ -2,25 +2,22 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/stylesheets/movies.css">
 </head>
 <html lang="es">
 <body>
 	<div>
-		<h2>Resultado de tu busqueda</h2>
-		<section>
-		  <a href="#"></a>
-		  	<section>
-			<ul>
-			  <% peliculas.forEach(peliculas=> { %>
-				  <a href= <%= "/movies/detail/" + peliculas.id %> >
-					<article>
-					  <p><%= peliculas.title %> </p>
-					</article>
-				  </a>
-				<% }) %>
-		  	</ul>
-			</section>
-  		</section>
+		<h1 class="banner">Search results</h1>
+	</div>
+	<div>
+		<article class='eachMovie'>
+			<% peliculas.forEach(peliculas=> { %>
+			<a class='searchcss' href=<%="/movies/detail/" + peliculas.id %> >
+			<p class=movieTitle><%= peliculas.title %></p>
+			<img class='movieImage' src="/images/movieBackground.png" alt="logo">
+			</a>
+			<% }) %>
+		</article>
 	</div>
 </body>	
 </html>
