@@ -16,6 +16,11 @@ Version: v0.1.
 - "sequelize-cli": "^6.2.0"
 # Extra software required:
 - A local database environment like MAMP, XAMPP or any of your choosing.
+# In the next version: 
+- A CSS update for all views.
+- More information about movies and stuff.
+
+
 
 
 # Install notes
